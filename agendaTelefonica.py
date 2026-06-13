@@ -9,9 +9,17 @@ def exibirMenu():
     print("5 - Excluir contato")
     print("0 - Sair")
 
+def validarTelefone(t: str):
+    if len(t) != 11:
+          return False
+    for digito in t:
+          if not(digito.isnumeric()):
+            return False
+    return True
+
 def adicionarContato(n: str, e: str, t: str):
     contato = {
-         "nome": n,
+        "nome": n,
         "email": e,
         "telefone": t
     }

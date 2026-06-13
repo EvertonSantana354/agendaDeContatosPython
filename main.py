@@ -9,7 +9,10 @@ def Agenda():
                 nome = str(input("Insira o nome do contato:"))
                 email = str(input("Insira o email do contato:"))
                 telefone = str(input("Insira o telefone do contato:"))
-                adicionarContato(nome, email, telefone)
+                if not(validarTelefone(telefone)):
+                    print("Número de telefone inválido")
+                else:
+                    adicionarContato(nome, email, telefone)
             case 2:
                exibirAgenda()
             case 3:
