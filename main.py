@@ -1,6 +1,7 @@
 from agendaTelefonica import *
 
 def Agenda():
+    criarAgendaTelefonica()
     while(1):
         exibirMenu()
         acao = int(input("Escolha uma opção:"))
